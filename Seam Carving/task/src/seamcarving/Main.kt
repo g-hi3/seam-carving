@@ -2,10 +2,26 @@ package seamcarving
 
 import java.awt.Color
 import java.awt.image.BufferedImage
+import java.io.File
 import java.io.FileOutputStream
 import javax.imageio.ImageIO
 
-fun main() {
+fun main(args: Array<String>) {
+    val inFile = args[args.indexOf("-in") + 1]
+    val outFile = args[args.indexOf("-out") + 1]
+    val inImage = ImageIO.read(File(inFile))
+    val outImage = BufferedImage(inImage.width, inImage.height, BufferedImage.TYPE_INT_RGB)
+    for (x in 0 until inImage.width) {
+        for (y in 0 until inImage.height) {
+            val color = Color(inImage.getRGB(x, y))
+            val negativeColor = Color(255 - color.red, 255 - color.green, 255 - color.blue)
+            outImage.setRGB(x, y, negativeColor.rgb)
+        }
+    }
+    ImageIO.write(outImage, "png", File(outFile))
+}
+
+fun createRectangle() {
     println("Enter rectangle width:")
     val width = readLine()!!.toInt()
     println("Enter rectangle height:")

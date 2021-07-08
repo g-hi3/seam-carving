@@ -24,8 +24,6 @@ class EnergyMatrix(image: BufferedImage) {
 
     fun getEnergyAt(x: Int, y: Int): Double = energies[y][x]
 
-    fun getRow(y: Int): Array<Double> = energies[y]
-
     private fun getPixelEnergy(image: BufferedImage, x: Int, y: Int): Double {
         val horizontalDelta = getHorizontalDelta(image, x, y)
         val verticalDelta = getVerticalDelta(image, x, y)

@@ -42,7 +42,6 @@ fun getAllSeams(energyMatrix: EnergyMatrix): List<Seam> {
     return allSeams
 }
 
-// TODO: This function returns way too many (and also invalid) seams
 fun getSeams(energyMatrix: EnergyMatrix, x: Int, y: Int): List<Seam> {
     val energy = energyMatrix.getEnergyAt(x, y)
     val vertex = Vertex(x, y, energy)
@@ -69,4 +68,3 @@ fun getSeams(energyMatrix: EnergyMatrix, x: Int, y: Int): List<Seam> {
     }
     return seams
 }
-

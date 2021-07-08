@@ -272,6 +272,38 @@ files:
 - name: test/trees.png
   visible: false
   learner_created: false
+- name: src/seamcarving/EnergyMatrix.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/Vertex.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/Seam.kt
+  visible: true
+  learner_created: true
+- name: test/small-seam.png
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/100/stages/553/implement#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: "Exception in test #2\n\njava.lang.OutOfMemoryError: Java heap space\r\n\
+    \tat java.base/java.util.Arrays.copyOf(Arrays.java:3689)\r\n\tat java.base/java.util.ArrayList.grow(ArrayList.java:238)\r\
+    \n\tat java.base/java.util.ArrayList.grow(ArrayList.java:243)\r\n\tat java.base/java.util.ArrayList.add(ArrayList.java:486)\r\
+    \n\tat java.base/java.util.ArrayList.add(ArrayList.java:499)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:51)\r\
+    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:65)\r\
+    \n\tat seamcarving.MainKt.getSeams(Main.kt:55)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:55)\r\
+    \n\tat seamcarving.MainKt.getSeams(Main.kt:55)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:65)\r\
+    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
+    \n\tat seamcarving.MainKt.getSeams(Main.kt:65)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
+    \n\tat seamcarving.MainKt.getSeams(Main.kt:55)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
+    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:65)\r\
+    \n\tat seamcarving.MainKt.getSeams(Main.kt:65)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
+    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
+    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
+    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
+    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
+    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\n\
+    \nArguments: -in test/blue.png -out test/blue-seam.png"
+  time: Thu, 08 Jul 2021 16:51:50 UTC
 record: -1

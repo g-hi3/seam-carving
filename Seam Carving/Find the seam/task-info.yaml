@@ -287,23 +287,18 @@ files:
 feedback_link: https://hyperskill.org/projects/100/stages/553/implement#comment
 status: Failed
 feedback:
-  message: "Exception in test #2\n\njava.lang.OutOfMemoryError: Java heap space\r\n\
-    \tat java.base/java.util.Arrays.copyOf(Arrays.java:3689)\r\n\tat java.base/java.util.ArrayList.grow(ArrayList.java:238)\r\
-    \n\tat java.base/java.util.ArrayList.grow(ArrayList.java:243)\r\n\tat java.base/java.util.ArrayList.add(ArrayList.java:486)\r\
-    \n\tat java.base/java.util.ArrayList.add(ArrayList.java:499)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:51)\r\
-    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:65)\r\
-    \n\tat seamcarving.MainKt.getSeams(Main.kt:55)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:55)\r\
-    \n\tat seamcarving.MainKt.getSeams(Main.kt:55)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:65)\r\
-    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
-    \n\tat seamcarving.MainKt.getSeams(Main.kt:65)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
-    \n\tat seamcarving.MainKt.getSeams(Main.kt:55)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
-    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:65)\r\
-    \n\tat seamcarving.MainKt.getSeams(Main.kt:65)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
-    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
-    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
-    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
-    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\
-    \n\tat seamcarving.MainKt.getSeams(Main.kt:60)\r\n\tat seamcarving.MainKt.getSeams(Main.kt:60)\n\
-    \nArguments: -in test/blue.png -out test/blue-seam.png"
-  time: Thu, 08 Jul 2021 16:51:50 UTC
+  message: |-
+    Error in test #2
+
+    In this test, the program is running for a long time, more than 15 seconds. Most likely, the program has gone into an infinite loop.
+
+    Please find below the output of your program during this failed test.
+
+    ---
+
+    Arguments: -in test/blue.png -out test/blue-seam.png
+
+    Before energy matrix: 21
+    Before optimal seam: 79
+  time: Wed, 21 Jul 2021 18:41:27 UTC
 record: -1

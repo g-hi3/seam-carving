@@ -9,20 +9,23 @@ class EnergyMatrix(image: BufferedImage) {
 
     val width: Int = image.width
     val height: Int = image.height
-    private val energies: Array<Array<Double>>
+    private val vertices: Array<Array<Vertex>>
 
     init {
-        energies = Array(height) { y ->
+        vertices = Array(height) { y ->
             Array(width) { x ->
-                getPixelEnergy(image, x, y)
+                val energy = getPixelEnergy(image, x, y)
+                Vertex(x, y, energy)
             }
         }
     }
 
     val maxEnergy: Double
-        get() = energies.flatten().maxByOrNull { it }!!
+        get() = vertices.flatten().maxOfOrNull { it.energy }!!
 
-    fun getEnergyAt(x: Int, y: Int): Double = energies[y][x]
+    fun getVertexAt(x: Int, y: Int): Vertex = vertices[y][x]
+
+    fun getEnergyAt(x: Int, y: Int): Double = getVertexAt(x, y).energy
 
     private fun getPixelEnergy(image: BufferedImage, x: Int, y: Int): Double {
         val horizontalDelta = getHorizontalDelta(image, x, y)

@@ -1,9 +1,18 @@
 package seamcarving
 
-data class Seam(private val vertices: MutableList<Vertex>) {
+class Seam {
+
+    private val vertices: MutableList<Vertex> = mutableListOf()
 
     val energy: Double
-        get() = vertices.sumByDouble { it.energy }
+        get() = vertices.sumOf { it.energy }
+
+    var isValid: Boolean
+        private set
+
+    init {
+        isValid = true
+    }
 
     fun appendVertex(vertex: Vertex) = vertices.add(vertex)
 
@@ -11,6 +20,15 @@ data class Seam(private val vertices: MutableList<Vertex>) {
 
     override fun toString(): String {
         return vertices.joinToString(" -> ") + " : " + energy
+    }
+
+    companion object {
+
+        val Invalid: Seam = Seam()
+
+        init {
+            Invalid.isValid = false
+        }
     }
 
 }

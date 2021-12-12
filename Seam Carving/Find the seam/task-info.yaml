@@ -281,6 +281,18 @@ files:
 - name: src/seamcarving/Seam.kt
   visible: true
   learner_created: true
+- name: src/seamcarving/Dijkstra.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/fromsolution/SeamHandler.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/fromsolution/Helper.kt
+  visible: true
+  learner_created: true
+- name: src/seamcarving/fromsolution/ImageEnergy.kt
+  visible: true
+  learner_created: true
 - name: test/small-seam.png
   visible: true
   learner_created: true
@@ -288,17 +300,10 @@ feedback_link: https://hyperskill.org/projects/100/stages/553/implement#comment
 status: Failed
 feedback:
   message: |-
-    Error in test #2
+    Wrong answer in test #1
 
-    In this test, the program is running for a long time, more than 15 seconds. Most likely, the program has gone into an infinite loop.
+    Total energy of your seam (493.047542) does not match expected value (466.371057 +/- 0.000010)
 
-    Please find below the output of your program during this failed test.
-
-    ---
-
-    Arguments: -in test/blue.png -out test/blue-seam.png
-
-    Before energy matrix: 21
-    Before optimal seam: 79
-  time: Wed, 21 Jul 2021 18:41:27 UTC
+    Arguments: -in test/small.png -out test/small-seam.png
+  time: Tue, 10 Aug 2021 20:34:04 UTC
 record: -1

@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/312105/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Wed, 21 Jul 2021 17:27:42 UTC
+update_date: Wed, 10 Nov 2021 19:51:55 UTC
 stages:
 - id: 550
   step: 9015
@@ -16,7 +16,7 @@ stages:
   is_completed: true
 - id: 553
   step: 9018
-  is_completed: false
+  is_completed: true
 - id: 554
   step: 9019
   is_completed: false
@@ -33,10 +33,6 @@ topics:
     theory_id: 7112
   - title: Types of matrices
     theory_id: 7285
-  - title: Modulo division
-    theory_id: 10586
-  - title: Modulo division with negative numbers
-    theory_id: 13541
   - title: Units of information
     theory_id: 6865
   - title: IDE
@@ -45,10 +41,10 @@ topics:
     theory_id: 9704
   - title: Files
     theory_id: 13025
-  - title: External resources
-    theory_id: 6216
   - title: Computer programming
     theory_id: 8739
+  - title: External resources
+    theory_id: 6216
   - title: Introduction to Kotlin
     theory_id: 4350
   - title: Basic literals
@@ -59,6 +55,8 @@ topics:
     theory_id: 4371
   - title: Data types
     theory_id: 4388
+  - title: The classification of basic types
+    theory_id: 4455
   - title: Comments
     theory_id: 4406
   - title: Coding style conventions
@@ -67,32 +65,22 @@ topics:
     theory_id: 4389
   - title: Standard output
     theory_id: 4425
+  - title: Arithmetic operations
+    theory_id: 4472
   - title: Boolean and logical operations
     theory_id: 4515
+  - title: Increment and decrement
+    theory_id: 10776
   - title: Invoking functions
     theory_id: 4575
   - title: Standard input
     theory_id: 4445
-  - title: The classification of basic types
-    theory_id: 4455
   - title: Type conversion
     theory_id: 4672
   - title: Reading data with a readLine
     theory_id: 11224
   - title: Objects
     theory_id: 11233
-  - title: Libraries
-    theory_id: 8504
-  - title: String basics
-    theory_id: 12553
-  - title: String templates
-    theory_id: 4547
-  - title: IntelliJ IDEA
-    theory_id: 3801
-  - title: Arithmetic operations
-    theory_id: 4472
-  - title: Increment and decrement
-    theory_id: 10776
   - title: Type of the numeric expression
     theory_id: 9506
   - title: Integers in action
@@ -101,51 +89,71 @@ topics:
     theory_id: 4525
   - title: Declaring functions
     theory_id: 4580
-  - title: Characters
-    theory_id: 4680
-  - title: Working with strings
-    theory_id: 12561
-  - title: Ranges
-    theory_id: 4633
   - title: Equality
     theory_id: 11236
-  - title: Arrays
-    theory_id: 4564
-  - title: String arrays
-    theory_id: 11477
-  - title: Multi-dimensional array
-    theory_id: 10950
+  - title: Libraries
+    theory_id: 8504
+  - title: String basics
+    theory_id: 12553
+  - title: String templates
+    theory_id: 4547
   - title: If expression
     theory_id: 4625
   - title: Repeating blocks
     theory_id: 4643
-  - title: For loop and ranges
-    theory_id: 4652
-  - title: For loop and arrays
-    theory_id: 4657
   - title: Functions as objects
     theory_id: 5991
   - title: Lambda expressions
     theory_id: 6154
+  - title: IntelliJ IDEA
+    theory_id: 3801
+  - title: Unicode
+    theory_id: 7899
+  - title: Characters
+    theory_id: 4680
+  - title: Ranges
+    theory_id: 4633
+  - title: For loop and ranges
+    theory_id: 4652
+  - title: RGB
+    theory_id: 8819
+  - title: Introduction to MutableList
+    theory_id: 14879
+  - title: Work with MutableLists
+    theory_id: 14902
+  - title: For loop and lists
+    theory_id: 15022
+  - title: Multi-dimensional list
+    theory_id: 15127
+  - title: Reading files
+    theory_id: 6351
+  - title: Writing files
+    theory_id: 9710
   - title: Introduction to collections
     theory_id: 10390
   - title: List
     theory_id: 10730
   - title: Mutable List
     theory_id: 11032
+  - title: Image colors
+    theory_id: 14484
+  - title: Image libraries
+    theory_id: 16348
   - title: Errors in programs
     theory_id: 11559
   - title: What is an exception
     theory_id: 7243
-  - title: Reading files
-    theory_id: 6351
-  - title: RGB
-    theory_id: 8819
   1:
   - title: Command line overview
     theory_id: 8977
   - title: Parameters and options
     theory_id: 9746
+  - title: Working with strings
+    theory_id: 12561
+  - title: Arrays
+    theory_id: 4564
+  - title: String arrays
+    theory_id: 11477
   - title: The main() function
     theory_id: 10484
   - title: IntelliJ Run Configurations
@@ -157,14 +165,18 @@ topics:
   - title: The try-catch statement
     theory_id: 10622
   2:
-  - title: Bugs and debugging
+  - title: What is a bug
     theory_id: 5504
   - title: Introduction to OOP
     theory_id: 3614
+  - title: Encapsulation
+    theory_id: 8519
   - title: Floating-point types
     theory_id: 4502
   - title: The Math library
     theory_id: 12532
+  - title: Declaring classes
+    theory_id: 6200
   - title: When expression
     theory_id: 4631
   - title: Functional decomposition
@@ -173,8 +185,6 @@ topics:
     theory_id: 4637
   - title: Named arguments
     theory_id: 4640
-  - title: Declaring classes
-    theory_id: 6200
   - title: Constructors
     theory_id: 10740
   - title: Member functions
@@ -184,48 +194,38 @@ topics:
   - title: Secondary constructor
     theory_id: 10746
   3:
-  - title: Optimization problems
-    theory_id: 12180
-  - title: Basics of sets
-    theory_id: 8220
-  - title: Basics of functions
-    theory_id: 8857
-  - title: A limit of a function
-    theory_id: 9941
-  - title: Operations with limits
-    theory_id: 11627
-  - title: 'Limits: indeterminate forms'
-    theory_id: 10262
-  - title: Introduction to derivatives
-    theory_id: 10822
-  - title: Derivatives of polynomials
-    theory_id: 11408
   - title: Computer algorithms
-    theory_id: 4953
+    theory_id: 16547
   - title: The big O notation
-    theory_id: 13991
+    theory_id: 16699
   - title: Data structures
     theory_id: 5161
+  - title: Recursion basics
+    theory_id: 5984
   - title: Divide and conquer
     theory_id: 3544
+  - title: Decrease and conquer
+    theory_id: 14669
   - title: Queue
     theory_id: 5350
   - title: Priority queue
     theory_id: 7384
+  - title: Pseudocode
+    theory_id: 15090
   - title: Dynamic programming basics
     theory_id: 7948
-  - title: Recursion basics
-    theory_id: 5984
   - title: Graph
-    theory_id: 6685
+    theory_id: 15967
   - title: Basic terminology
-    theory_id: 6922
+    theory_id: 15968
   - title: Representation of graphs
-    theory_id: 5227
-  - title: Weighted graph
-    theory_id: 5645
+    theory_id: 15969
   - title: Directed acyclic graph
     theory_id: 5186
+  - title: Weighted graph
+    theory_id: 5645
+  - title: Shortest path problem
+    theory_id: 15223
   - title: Breadth-first search
     theory_id: 7068
   - title: Dijkstra's algorithm
@@ -233,6 +233,10 @@ topics:
   4:
   - title: Operations with matrices
     theory_id: 7296
+  - title: Inheritance
+    theory_id: 9844
+  - title: Polymorphism
+    theory_id: 10027
   - title: Inheritance
     theory_id: 7770
   - title: Overriding functions

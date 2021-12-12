@@ -18,6 +18,12 @@ class EnergyMatrix(image: BufferedImage) {
                 Vertex(x, y, energy)
             }
         }
+        for (y in 0 until height) {
+            for (x in 0 until width) {
+                val vertex = getVertexAt(x, y)
+                vertex.connectedVertices = getConnectedVerticesAt(x, y)
+            }
+        }
     }
 
     val maxEnergy: Double
@@ -63,6 +69,26 @@ class EnergyMatrix(image: BufferedImage) {
 
     private fun getSquaredDelta(before: Int, after: Int): Double {
         return (before - after).toDouble().pow(2)
+    }
+
+    private fun getConnectedVerticesAt(x: Int, y: Int): Set<Vertex> {
+        val connectedVertices = mutableSetOf<Vertex>()
+        if (x < 0
+            || y < 0
+            || y == height - 1) {
+            return connectedVertices
+        }
+        val centerVertex = getVertexAt(x, y + 1)
+        connectedVertices.add(centerVertex)
+        if (x > 0) {
+            val leftVertex = getVertexAt(x - 1, y + 1)
+            connectedVertices.add(leftVertex)
+        }
+        if (x < width - 1) {
+            val rightVertex = getVertexAt(x + 1, y + 1)
+            connectedVertices.add(rightVertex)
+        }
+        return connectedVertices
     }
 
 }
